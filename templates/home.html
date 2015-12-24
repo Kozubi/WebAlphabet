@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for i in btnList %}
+<button type="button" onclick="myFunc({{i}})">{{i}}</button>
+{% if i%3 ==0 %}
+</br>
+{% endif %}
+
+    {% endfor %}
+
+</body>
+<script>
+    function myFunc(i){
+    console.log("CLICKED", i);
+    }
+</script>
+</html>
