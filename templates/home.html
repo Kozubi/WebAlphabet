@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/static/styles.css" type="text/css">
 </head>
 <body aaa="123">
 <div name="div">
 {% for i in btnList %}
-<button type="button" onclick="myFunc('{{i}}')" name="{{i}}">{{i}}</button>
+<button class="buttons" type="button" onclick="myFunc('{{i}}')" name="{{i}}">{{i}}</button>
 
 
     {% endfor %}
@@ -15,7 +16,8 @@
 </body>
 <script>
     function myFunc(i){
-    var audio = new Audio('{{ url_for("static", filename = "nie.wav" )}}');
+    // dac i +"wav" jako nazwa pliku
+    var audio = new Audio("/static/nie.wav");
     audio.play();
     console.log(i);
     }
